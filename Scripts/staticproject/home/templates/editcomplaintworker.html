@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+  <center>  <h2 class="text-center alert alert-danger">COMPLAINT UPDATE </h2></center>
+       
+
+      
+        <center>
+        <form action=""method="post">
+            {% csrf_token %}
+            {{fm123.as_p}}
+            <input type="submit" class="btn btn-success" value="Add">
+                     <a href="editcomplaintworkerBACK" class="btn btn-info">BACK</a></center>
+        </form>
+      
+
+
+        {% endblock content %}
+
+
+   

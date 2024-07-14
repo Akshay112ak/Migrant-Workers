@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}<font color="#000000">
+        <center> <h2 class="text-center alert alert-danger">card download</h2>
+            
+            {% for stu in stu %}
+            <a href="{{stu.file.url}}" target="_blank"class="btn btn-info">Click Here</a>
+            {% endfor %}
+                       <a href="agencylabourcommissiondownloadcardBACK" class="btn btn-info">BACK</a></center>
+               
+
+                                 <br><br><br>
+                                 <br><br><br>
+                                 <br><br><br>
+                                  {% endblock content %}
+
+
+   

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+  <center>  <h2 class="text-center alert alert-danger">card upload</h2></center>
+       
+
+      
+        <center>
+        <form action=""method="post"enctype="multipart/form-data">
+            {% csrf_token %}
+            {{f32243.as_p}}
+            <input type="submit" class="btn btn-success" value="UPLOAD">
+                  <a href="labourcommissionuploadcardBACK" class="btn btn-info">BACK</a></center>
+        </form>
+      
+            <br><br><br>
+
+        {% endblock content %}
+
+
+   

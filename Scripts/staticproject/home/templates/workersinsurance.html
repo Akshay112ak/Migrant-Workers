@@ -1,0 +1,94 @@
+{% extends 'workerhomebase.html' %}
+{% block content %}
+  {% load static %}
+  <head>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'vali-master/docs/css/main.css' %}">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body class="app sidebar-mini rtl">
+    <!-- Navbar-->
+    
+    <main class="app-content">
+      <div class="app-title">
+        <div>
+          <h1><i class="fa fa-th-list"></i> SCHEME TABLE</h1>
+          <p>SCHEME SELECTION BY WOKER</p>
+        </div>
+        <ul class="app-breadcrumb breadcrumb side">
+         
+         
+          <li class="breadcrumb-item active"><a href="#"> Table</a></li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="tile">
+            <div class="tile-body">
+              <table class="table table-hover table-bordered" id="sampleTable">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>SCHEME_TYPE</th>
+                    <th>SCHEME_NAME</th>
+                    <th>SCHEME_AMOUNT</th>
+                    <th>MONTHLY_AMOUNT</th>
+                    <th>INTEREST_RATE</th>
+                    <th>SCHEME_DETAILS</th>
+                    <th></th>
+                   
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for stu in stu %}
+                <tr>
+                  <td>{{stu.id}}</td>
+                  <td>{{stu.SCHEME_TYPE}}</td>
+                  <td>{{stu.SCHEME_NAME}}</td>
+                  <td>{{stu.SCHEME_AMOUNT}}</td>
+                  <td>{{stu.MONTHLY_AMOUNT}}</td>
+                  <td>{{stu.INTEREST_RATE}}</td>
+                  <td>{{stu.SCHEME_DETAILS}}</td>
+                  <td><a href="applyscheme/{{stu.id}}" class="btn btn-warning">APPLY</a></td>
+                 
+                  
+                  
+                  
+                  
+                  </tr>
+                  
+                    {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Essential javascripts for application to work-->
+    <script src="{% static 'vali-master/docs/js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'vali-master/docs/js/popper.min.js' %}"></script>
+    <script src="{% static 'vali-master/docs/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'vali-master/docs/js/main.js' %}"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="{% static 'vali-master/docs/js/plugins/pace.min.js' %}"></script>
+    <!-- Page specific javascripts-->
+    <!-- Data table plugin-->
+    <script type="text/javascript" src="{% static 'vali-master/docs/js/plugins/jquery.dataTables.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'vali-master/docs/js/plugins/dataTables.bootstrap.min.js' %}"></script>
+    <script type="text/javascript">$('#sampleTable').DataTable();</script>
+    <!-- Google analytics script-->
+    <script type="text/javascript">
+      if(document.location.hostname == 'pratikborsadiya.in') {
+      	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      	ga('create', 'UA-72504830-1', 'auto');
+      	ga('send', 'pageview');
+      }
+    </script>
+  </body>
+  {% endblock content %}

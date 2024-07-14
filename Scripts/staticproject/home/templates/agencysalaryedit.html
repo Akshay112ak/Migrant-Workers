@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}<font color="#000000">
+        <center> <h2 class="text-center alert alert-danger">SALARY</h2>
+        <form action=""method="post">
+            {% csrf_token %}
+            {{f322.as_p}}
+            <input type="submit" class="btn btn-success" value="Add">
+                   <a href="agencysalaryeditBACK" class="btn btn-info">BACK</a></center>
+            
+        </form>
+      </font>
+
+
+        {% endblock content %}
+
+
+   

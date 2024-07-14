@@ -1,0 +1,20 @@
+{% extends 'workerhomebase.html' %}
+{% block content %}
+  <center>  <h2 class="text-center alert alert-danger">COMPLAINT REGISTRATION</h2></center>
+       
+
+      
+        <center>
+        <form action=""method="post">
+            {% csrf_token %}
+            {{f322.as_p}}
+            <input type="submit" class="btn btn-success" value="Add">
+                  </center>
+        </form>
+      
+
+
+        {% endblock content %}
+
+
+   

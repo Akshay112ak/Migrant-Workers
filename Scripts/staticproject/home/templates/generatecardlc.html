@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+  <center>  <h2 class="text-center alert alert-danger">WORKER CARD REGISTRATION</h2></center>
+       
+
+      
+        <center>
+        <form action=""method="post">
+            {% csrf_token %}
+            {{fmm12.as_p}}
+            <a href="{% url 'generate-pdf' fmm12.instance.id %}" class="btn btn-primary">Download PDF</a>
+            <a href="generatecardlcBACK" class="btn btn-info">BACK</a></center>
+        </form>
+      
+
+
+        {% endblock content %}
+
+
+   

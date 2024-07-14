@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+        {% block content %}
+        
+        
+          <center>  <h2 class="text-center alert alert-danger">EDIT NOTIFICATION</h2></center></font>
+               
+        
+                <font color="#000000">
+               
+                <form action=""method="post">
+                    {% csrf_token %}
+                    {{stu.as_p}}
+                  <center>  <input type="submit" class="btn btn-success" value="EDIT">
+                                       <a href="editnotificationBACK" class="btn btn-info">BACK</a> 
+                  
+                </form>
+              </body></html>
+        {% endblock content %}

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% comment %} {% extends 'base.html' %}
+{% block content %}
+    <center>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+        <h2 class="text-center alert alert-danger">AGENCY REGISTRATION</h2>
+    
+    <form action="" method="post" id="registration-form">
+        {% csrf_token %}
+        {{ fmm.as_p }}
+        <center>
+            <input type="submit" class="btn btn-success" value="Add" id="submit-button">
+            <a href="BACK" class="btn btn-info">BACK</a>
+        </center>
+    </form>
+</div>
+</div>
+</div>
+</font>
+{% endblock content %} {% endcomment %}
+
+
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body"style="padding: 50px;">
+                        <h2 class="text-center alert alert-danger">AGENCY REGISTRATION</h2>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ fmm.as_p }}
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-success">Add</button>
+                                <a href="BACK" class="btn btn-info">BACK</a>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% if messages %}
+<ul class="messages">
+    {% for messages in messages %}
+    <li{% if messages.tags %} class="{{ messages.tags}}"{% endif %}><h2 class="text-center alert alert-success">{{ messages }}</h2></li>
+    {% endfor %}
+</ul>
+{% endif %}</center>
+
+
+{% endblock content %}

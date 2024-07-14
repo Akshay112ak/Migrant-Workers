@@ -1,0 +1,15 @@
+{% extends 'insuranceagencyhomebase.html' %}
+{% block content %}<font color="#000000">
+        <center> <h2 class="text-center alert alert-danger">SCHEME REGISTRATION</h2>
+        <form action=""method="post">
+            {% csrf_token %}
+            {{fmm123.as_p}}
+            <input type="submit" class="btn btn-success" value="Add"></center>
+        </form>
+      </font>
+
+
+        {% endblock content %}
+
+
+   
